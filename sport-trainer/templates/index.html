@@ -1,0 +1,20 @@
+{% extends "bootstrap/base.html" %}
+{% block html_attribs %} lang="fr"{% endblock %}
+{% block title %}This is an example page{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-fixed-top">
+  <!-- ... -->
+</div>
+{% endblock %}
+
+{% block content %}
+{{super()}}
+  <h1>Hello, Bootstrap</h1>
+
+
+
+{%- block footer %}
+<footer>&copy; 2024, M. SIBERT</footer>
+{%- endblock footer %}
+{% endblock %}
