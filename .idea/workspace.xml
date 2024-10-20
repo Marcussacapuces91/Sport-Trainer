@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fcc5fc6-4bbd-4190-b9a0-26734eb7a3b9" name="Changes" comment="aa">
-      <change afterPath="$PROJECT_DIR$/sport-trainer/__main__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sport-trainer/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sport-trainer/templates/index.html" afterDir="false" />
+    <list default="true" id="2fcc5fc6-4bbd-4190-b9a0-26734eb7a3b9" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/sport-trainer/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport-trainer/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/sport-trainer/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport-trainer/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sport-trainer/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729325925649</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update">
+      <option name="closed" value="true" />
+      <created>1729335732541</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729335732541</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,6 +147,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="aa" />
-    <option name="LAST_COMMIT_MESSAGE" value="aa" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
 </project>

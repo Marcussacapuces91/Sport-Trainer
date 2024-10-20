@@ -16,7 +16,7 @@ class Application(Flask):
         self.config['SECRET_KEY'] = secrets.token_hex()
         self.teardown_appcontext(self._close_connection)
 
-        self.add_url_rule("/", view_func=self.index)
+        # self.add_url_rule("/", view_func=self.index)
 
     def _get_db(self):
         db = getattr(g, '_database', None)
@@ -40,10 +40,13 @@ class Application(Flask):
         if db is not None:
             db.close()
 
+    @Flask.route("/")
     def index(self):
         session['user'] = 42
         print(session)
-
+        db = self._get_db()
+        row = db.execute(f"SELECT * FROM user WHERE id={session['user']}")
+        print(row)
         return render_template('index.html')
 
 
