@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fcc5fc6-4bbd-4190-b9a0-26734eb7a3b9" name="Changes" comment="Update">
-      <change afterPath="$PROJECT_DIR$/sport-trainer/orm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sport-trainer/static/_ed275feb-5bde-4deb-bcc3-324d3bd79a50.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sport-trainer/static/homme-bb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sport-trainer/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sport-trainer/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sport-trainer/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/sport-trainer/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sport-trainer/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sport-trainer/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sport-trainer/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sport-trainer/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +142,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729445073361</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update">
+      <option name="closed" value="true" />
+      <created>1730238848514</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730238848514</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Update">
+      <option name="closed" value="true" />
+      <created>1730239152779</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730239152779</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
