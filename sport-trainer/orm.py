@@ -2,7 +2,8 @@ from sqlalchemy import String
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 from datetime import datetime
-from bcrypt import gensalt, hashpw
+from bcrypt import gensalt, hashpw, checkpw
+
 
 class Base(DeclarativeBase):
     pass
@@ -28,6 +29,10 @@ class User(Base):
     def set_password(self, password:str):
         assert(password is not None)
         self.password = hashpw(password.encode('utf-8'), gensalt())
+
+    def test_password(self, password:str):
+        assert(password is not None)
+        return checkpw(password.encode('utf-8'), self.password)
 
     def __str__(self):
         return (super().__str__()[:-1] +
