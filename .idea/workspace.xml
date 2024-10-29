@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fcc5fc6-4bbd-4190-b9a0-26734eb7a3b9" name="Changes" comment="Update">
+      <change afterPath="$PROJECT_DIR$/sport-trainer/orm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sport-trainer/static/_ed275feb-5bde-4deb-bcc3-324d3bd79a50.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sport-trainer/static/homme-bb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sport-trainer/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sport-trainer/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sport-trainer/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/sport-trainer/__main__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sport-trainer/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sport-trainer/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport-trainer/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sport-trainer/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,16 +52,21 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Marc/PycharmProjects/Sport-Trainer/sport-trainer",
+    "last_opened_file_path": "C:/Users/Marc/PycharmProjects/Sport-Trainer/sport-trainer/static",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Marc\PycharmProjects\Sport-Trainer\sport-trainer\static" />
+      <recent name="C:\Users\Marc\PycharmProjects\Sport-Trainer\sport-trainer\templates" />
       <recent name="C:\Users\Marc\PycharmProjects\Sport-Trainer\sport-trainer" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Marc\PycharmProjects\Sport-Trainer\sport-trainer\static" />
+      <recent name="C:\Users\Marc\PycharmProjects\Sport-Trainer\sport-trainer\templates" />
       <recent name="C:\Users\Marc\PycharmProjects\Sport-Trainer\sport-trainer" />
+      <recent name="C:\Users\Marc\PycharmProjects\Sport-Trainer" />
     </key>
   </component>
   <component name="RunManager">
@@ -131,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729335732541</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update">
+      <option name="closed" value="true" />
+      <created>1729445073361</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729445073361</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

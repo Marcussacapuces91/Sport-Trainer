@@ -1,53 +1,59 @@
 import secrets
-import sqlite3
-from sqlite3 import OperationalError
 
-from flask import Flask, render_template, session, g
-from flask_bootstrap import Bootstrap
+from flask import Flask, render_template, session, g, redirect, Response
+from flask_bootstrap import Bootstrap5
+from flask_sqlalchemy import SQLAlchemy
+
+
+from orm import Base, User
 
 
 class Application(Flask):
 
-    DATABASE = 'sqlite.db'
+    DATABASE = 'sqlite:///sqlite.db'
 
     def __init__(self, import_name: str):
         super().__init__(import_name)
-        Bootstrap(self)
+        Bootstrap5(self)
         self.config['SECRET_KEY'] = secrets.token_hex()
-        self.teardown_appcontext(self._close_connection)
+        self.config['SQLALCHEMY_DATABASE_URI'] = self.DATABASE
+        # self.config['SQLALCHEMY_RECORD_QUERIES'] = True
+        self.config['SQLALCHEMY_ECHO'] = True
+        self.db = SQLAlchemy(model_class=Base)
+        self.db.init_app(self)
 
-        # self.add_url_rule("/", view_func=self.index)
+#        self.teardown_appcontext(self._close_connection)
 
-    def _get_db(self):
-        db = getattr(g, '_database', None)
-        if db is None:
-            db = g._database = sqlite3.connect(self.DATABASE)
-        return db
+        self.add_url_rule("/", view_func=self.index)
+        self.add_url_rule("/login", view_func=self.login, methods=["GET","POST"])
 
     def init_db(self):
         with self.app_context():
-            db = self._get_db()
-            try:
-                with self.open_resource('schema.sql', mode='r') as f:
-                    db.executescript(f.read())
-                db.commit()
-            except OperationalError as e:
-                print(f"SQL Error: {e} in 'schema.sql'")
-                raise e
+            self.db.drop_all()
+            self.db.create_all()
+            with self.db.session.begin():
+                user1 = User('marc@sibert.fr', 'Marcus 1', 'Marc SIBERT', 'password')
+                user2 = User('test@sibert.fr', 'Marcus 2', 'Marc SIBERT', 'password')
+                self.db.session.add_all((user1, user2))
+            with self.db.session.execute(self.db.select(User)) as result:
+                for user in result.scalars():
+                    print(user)
 
-    def _close_connection(self, exception):
-        db = getattr(g, '_database', None)
-        if db is not None:
-            db.close()
+    def index(self) -> Response|str:
+        if 'user' not in session:
+            return redirect("/login")
 
-    @Flask.route("/")
-    def index(self):
-        session['user'] = 42
         print(session)
         db = self._get_db()
-        row = db.execute(f"SELECT * FROM user WHERE id={session['user']}")
-        print(row)
-        return render_template('index.html')
+        try:
+            user = User.get_from_id(db, session['user'])
+        except TypeError as e:
+            return "User not found!", 404
+        return render_template('index.html', user=user)
+
+    @staticmethod
+    def login() -> str:
+        return render_template('login.html')
 
 
 if __name__ == "__main__":

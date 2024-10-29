@@ -1,20 +1,23 @@
-{% extends "bootstrap/base.html" %}
+{% extends "base.html" %}
 {% block html_attribs %} lang="fr"{% endblock %}
-{% block title %}This is an example page{% endblock %}
+{% block title %}Accueil{% endblock %}
 
-{% block navbar %}
-<div class="navbar navbar-fixed-top">
-  <!-- ... -->
+{%- block navbar %}
+<div>Navbar
+<a href="#">Home</a>
 </div>
-{% endblock %}
-
-{% block content %}
-{{super()}}
-  <h1>Hello, Bootstrap</h1>
+{%- endblock %}
 
 
+{%- block content %}
+{{ super() }}
+    <h1>Hello, {{user.short_name}}</h1>
 
-{%- block footer %}
-<footer>&copy; 2024, M. SIBERT</footer>
-{%- endblock footer %}
-{% endblock %}
+{% block footer %}
+    <footer>
+      <hr/>
+      &copy; 2024, M. SIBERT
+    </footer>
+{% endblock footer %}
+
+{%- endblock content %}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        {%- block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {%- block styles %}
+        <!-- Bootstrap CSS -->
+        {{ bootstrap.load_css() }}
+        <script src=""></script>
+        {%- endblock %}
+
+        <title>{% block title %}{% endblock %}</title>
+        {%- endblock %}
+    </head>
+    <body>
+
+        {%- block navbar %}
+        {%- endblock %}
+
+        <!-- Your page content -->
+        {%- block content %}{% endblock %}
+
+        <footer>
+            <hr/>
+            &copy; 2024, M. SIBERT
+        </footer>
+        {%- block scripts %}
+            <!-- Optional JavaScript -->
+            {{ bootstrap.load_js() }}
+        {%- endblock %}
+    </body>
+</html>
