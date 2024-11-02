@@ -1,23 +1,17 @@
 {% extends "base.html" %}
-{% block html_attribs %} lang="fr"{% endblock %}
+
 {% block title %}Accueil{% endblock %}
 
 {%- block navbar %}
-<div>Navbar
-<a href="#">Home</a>
-</div>
+{{ super() }}
 {%- endblock %}
-
 
 {%- block content %}
 {{ super() }}
-    <h1>Hello, {{user.short_name}}</h1>
+    <h1>Hello {{user.shortname}}</h1>
 
-{% block footer %}
-    <footer>
-      <hr/>
-      &copy; 2024, M. SIBERT
-    </footer>
-{% endblock footer %}
+    <p>{{user.fullname}}</p>
+    <p>{{user.email}}</p>
+    <p>{{user.created}}</p>
 
 {%- endblock content %}
